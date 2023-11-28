@@ -8,19 +8,7 @@ const estado = reactive({
   filtro: 'todas',
   tarefaTemp: '',
   tarefas: [
-    {
-      titulo: 'Estudar Es6',
-      finalizada: false,
-    },
-    {
-      titulo: 'Estudar Sass',
-      finalizada: false,
 
-    },
-    {
-      titulo: 'Ir para academia',
-      finalizada: true,
-    },
   ]
 })
 
@@ -59,9 +47,8 @@ const cadastraTarefa = () => {
 <template>
   <div class="container">
     <Cabecalho :tarefas-pendentes="getTarefasPendentes().length" />
-    <Formulario :trocar-filtro="evento => estado.filtro = evento.target.value" :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="evento => estado.tarefaTemp = estado.target.value"
-      :cadastra-tarefa="cadastraTarefa" />
-      <ListaDeTarefas :tarefas="getTarefasFiltradas()" />
+    <Formulario :trocar-filtro="evento => estado.filtro = evento.target.value" :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="evento => estado.tarefaTemp = evento.target.value" :cadastra-tarefa="cadastraTarefa" />
+    <ListaDeTarefas :tarefas="getTarefasFiltradas()" />
   </div>
 </template>
 

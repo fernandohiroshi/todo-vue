@@ -1,5 +1,5 @@
 <script setup>
-    const props = defineProps(['tarefas']);
+const props = defineProps(['tarefas']);
 </script>
 <template>
     <ul class="list-group mt-4">
@@ -15,6 +15,6 @@
 
 <style scoped>
 .done {
-  text-decoration: line-through red;
+    text-decoration: line-through red;
 }
 </style>
